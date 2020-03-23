@@ -12,6 +12,14 @@ module.exports = appInfo => {
    **/
   const config = exports = {};
 
+  config.cluster = {
+    listen: {
+      port: 8282,
+      hostname: '127.0.0.1', // 不建议设置 hostname 为 '0.0.0.0'，它将允许来自外部网络和来源的连接，请在知晓风险的情况下使用
+      // path: '/var/run/egg.sock',
+    },
+  };
+
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1582516194112_7723';
 
