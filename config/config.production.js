@@ -20,10 +20,10 @@ module.exports = appInfo => {
 
   config.sequelize = {
     dialect: 'mysql',
-    host: '127.0.0.1',
+    host: '112.124.16.145',
     port: 3306,
-    database: 'blue-note-pro',
-    username: 'bruce_wang',
+    database: 'bluenote_pro',
+    username: 'bluenote_pro',
     password: 'Ww:123456',
     // 是否自动进行下划线转换（这里是因为DB默认的命名规则是下划线方式，而我们使用的大多数是驼峰方式）
     underscored: true,
