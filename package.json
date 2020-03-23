@@ -30,7 +30,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-blue-note-api",
+    "start": "egg-scripts start --daemon --env=production --title=egg-server-blue-note-api",
     "stop": "egg-scripts stop --title=egg-server-blue-note-api",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
