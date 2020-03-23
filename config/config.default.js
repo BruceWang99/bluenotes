@@ -67,6 +67,11 @@ module.exports = appInfo => {
     timezone: '+08:00',
   };
 
+  config.alinode = {
+    appid: '84125',
+    secret: '649df8d9b01aaec5ed3de2fe086ecb27dd56a77f',
+  };
+
   return {
     ...config,
     ...userConfig,
