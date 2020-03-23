@@ -14,10 +14,12 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "host": "112.124.16.145",
+    "dialect": "mysql",
+    "database": "bluenote_pro",
+    "username": "bluenote_pro",
+    "password": "Ww:123456",
+    "underscored": true,
+    "timezone": "+08:00"
   }
 }
