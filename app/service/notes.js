@@ -2,6 +2,7 @@
 
 const Service = require('egg').Service;
 const sequelize = require('sequelize');
+const Op = sequelize.Op;
 
 function toInt(str) {
   if (typeof str === 'number') return str;
@@ -17,9 +18,9 @@ class NoteService extends Service {
     let attributes = [ 'id', 'notebook_id', 'title', 'updated_at' ];
     if (q.notebookId)conditions.notebook_id = q.notebookId;
     if (q.obscure) {
-      conditions.$or = [
-        { title: { $like: `%${q.obscure}%` } },
-        { content: { $like: `%${q.obscure}%` } },
+      conditions[Op.or] = [
+        { title: { [Op.like]: `%${q.obscure}%` } },
+        { content: { [Op.like]: `%${q.obscure}%` } },
       ];
       attributes = [ 'id', 'notebook_id', 'title', 'content', 'updated_at' ];
     }

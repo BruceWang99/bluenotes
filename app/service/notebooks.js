@@ -2,7 +2,7 @@
 
 const Service = require('egg').Service;
 const sequelize = require('sequelize');
-
+const Op = sequelize.Op;
 function toInt(str) {
   if (typeof str === 'number') return str;
   if (!str) return str;
@@ -17,7 +17,7 @@ class NotebookService extends Service {
 
     const query = q.name ? {
       name: {
-        $like: `%${q.name}%`,
+        [Op.like]: `%${q.name}%`,
       },
     } : {};
     const list = await user.getNotebooks({
