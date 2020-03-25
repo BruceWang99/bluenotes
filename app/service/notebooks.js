@@ -13,7 +13,9 @@ class NotebookService extends Service {
 
   async index(q) {
     const { ctx } = this;
-    const user = await ctx.service.users.show(ctx.state.user.userid);
+    console.log(q, ctx.request.header.authorization);
+    const userid = q.userid;
+    const user = await ctx.service.users.show(userid);
 
     const query = q.name ? {
       name: {

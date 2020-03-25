@@ -16,6 +16,8 @@ class NoteService extends Service {
     const ctx = this.ctx;
     const conditions = {};
     let attributes = [ 'id', 'notebook_id', 'title', 'updated_at' ];
+    const userid = q.userid;
+    conditions.user_id = userid;
     if (q.notebookId)conditions.notebook_id = q.notebookId;
     if (q.obscure) {
       conditions[Op.or] = [

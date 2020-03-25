@@ -29,6 +29,7 @@ class UserService extends Service {
         token,
         user_name: user.user_name,
         email: user.email,
+        user_id: user.id,
       };
       return {
         error: false,

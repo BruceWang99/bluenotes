@@ -9,14 +9,14 @@ module.exports = app => {
   router.post('/api/users/login', controller.users.login);
   router.get('/api/users/:id', controller.users.show);
 
-  router.get('/api/notebooks', jwt, app.controller.notebooks.index);
+  router.get('/api/notebooks', app.controller.notebooks.index);
   router.post('/api/notebooks', jwt, app.controller.notebooks.create);
   router.put('/api/notebooks/:id', jwt, app.controller.notebooks.update);
   router.delete('/api/notebooks/:id', jwt, app.controller.notebooks.destroy);
 
-  router.get('/api/notes', jwt, app.controller.notes.index);
+  router.get('/api/notes', app.controller.notes.index);
   router.post('/api/notes', jwt, app.controller.notes.create);
-  router.get('/api/notes/:id', jwt, app.controller.notes.show);
+  router.get('/api/notes/:id', app.controller.notes.show);
   router.put('/api/notes/:id', jwt, app.controller.notes.update);
   router.delete('/api/notes/:id', jwt, app.controller.notes.destroy);
 
