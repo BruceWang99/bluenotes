@@ -19,6 +19,9 @@ class NoteService extends Service {
     const userid = q.userid;
     conditions.user_id = userid;
     if (q.notebookId)conditions.notebook_id = q.notebookId;
+    if (q.is_public) {
+      conditions.is_public = toInt(q.is_public);
+    }
     if (q.obscure) {
       conditions[Op.or] = [
         { title: { [Op.like]: `%${q.obscure}%` } },

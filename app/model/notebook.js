@@ -17,6 +17,10 @@ module.exports = app => {
       type: INTEGER,
       defaultValue: 0,
     },
+    is_public: {
+      type: INTEGER,
+      defaultValue: 0,
+    },
     created_at: DATE,
     updated_at: DATE,
   });
