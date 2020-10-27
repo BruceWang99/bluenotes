@@ -12,3 +12,7 @@ run/
 *.un~
 typings/
 .nyc_output/
+database/config.json
+config/config.default.js
+config/config.production.js
+config/config.unittest.js
