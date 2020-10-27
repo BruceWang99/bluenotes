@@ -34,5 +34,5 @@ npm run build // 打包网页版
 npm run electron:build // 打包桌面客户端
 ```
 ### tips
-(1) /config、database/config.json 文件下的数据库配置文件自行添加, 详情可参照 ***.example文件
-(2) blogh5/ftp.js 可配置前端项目的自动化部署到ftp服务器, 详情可参照 ***.example文件
+* /config、database/config.json 文件下的数据库配置文件自行添加, 详情可参照 ***.example文件
+* blogh5/ftp.js 可配置前端项目的自动化部署到ftp服务器, 详情可参照 ***.example文件
