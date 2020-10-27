@@ -5,7 +5,6 @@ node_modules/
 package-lock.json
 yarn.lock
 coverage/
-.idea/
 run/
 .DS_Store
 *.sw*
@@ -16,3 +15,31 @@ gidatabase/config.json
 config/config.default.js
 config/config.production.js
 config/config.unittest.js
+blogvue/ftp.js
+blogvue/.env.production
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+blogvue/node_modules
+blogvue/dist
+blogvue/ftp.js
+# local env files
+blogvue/package-lock.json
+blogvue/yarn.lock
+blogvue/.env.local
+blogvue/.env.*.local
+
+# Log files
+blogvue/npm-debug.log*
+blogvue/yarn-debug.log*
+blogvue/yarn-error.log*
+
+#Electron-builder output
+blogvue//dist_electron
