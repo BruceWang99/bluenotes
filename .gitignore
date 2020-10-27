@@ -15,8 +15,8 @@ gidatabase/config.json
 config/config.default.js
 config/config.production.js
 config/config.unittest.js
-blogvue/ftp.js
-blogvue/.env.production
+blogh5/ftp.js
+blogh5/.env.production
 
 # Editor directories and files
 .idea
@@ -27,19 +27,19 @@ blogvue/.env.production
 *.sln
 *.sw?
 
-blogvue/node_modules
-blogvue/dist
-blogvue/ftp.js
+blogh5/node_modules
+blogh5/dist
+blogh5/ftp.js
 # local env files
-blogvue/package-lock.json
-blogvue/yarn.lock
-blogvue/.env.local
-blogvue/.env.*.local
+blogh5/package-lock.json
+blogh5/yarn.lock
+blogh5/.env.local
+blogh5/.env.*.local
 
 # Log files
-blogvue/npm-debug.log*
-blogvue/yarn-debug.log*
-blogvue/yarn-error.log*
+blogh5/npm-debug.log*
+blogh5/yarn-debug.log*
+blogh5/yarn-error.log*
 
 #Electron-builder output
-blogvue//dist_electron
+blogh5/dist_electron
