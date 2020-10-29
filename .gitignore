@@ -16,7 +16,7 @@ config/config.default.js
 config/config.production.js
 config/config.unittest.js
 blogh5/ftp.js
-blogh5/.env.production
+blogh5/.env*
 
 # Editor directories and files
 .idea
