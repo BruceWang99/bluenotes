@@ -34,7 +34,9 @@
       </div>
     </section>
     <footer>
-      <div @click="changePage">{{ scrollDisabled ? '没有更多了' : '加载更多文章' }}</div>
+      <a href="javascript:;" @click="changePage">{{ scrollDisabled ? '没有更多了' : '加载更多文章' }}</a
+      ><br />
+      <a href="http://beian.miit.gov.cn" target="_blank">ICP备案证: 湘ICP备20001888号-1</a>
     </footer>
   </div>
 </template>
@@ -268,8 +270,15 @@ header ul.menu {
 }
 footer {
   height: 8vh;
-  text-align: center;
   cursor: pointer;
-  line-height: 8vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4vh 0;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
 }
 </style>
