@@ -1,5 +1,6 @@
 <template>
   <div class="sider-bar">
+    <!-- <avatar></avatar> -->
     <ul class="do-list">
       <router-link exact tag="li" to="/" class="do-item" v-if="false">
         <Icon type="ios-home" />
@@ -36,9 +37,7 @@
 <script>
 import Cookies from 'js-cookie';
 import { getDataByGet } from '../common/js/request.js';
-import { API_LOGOUT, API_AUTH } from '../common/js/apis.js';
 import { mapState, mapMutations } from 'vuex';
-import CryptoJS from 'crypto-js';
 import { getAES, getDAes } from '../common/js/util.js';
 
 export default {
@@ -50,16 +49,11 @@ export default {
       selectMenu: '',
     };
   },
-  mounted() {
-    //  if (!localStorage.getItem('token') && this.$route.name !=='Blog' && this.$route.name !=='articleDetail') {
-    //    this.$router.replace('login');
-    //  }
-  },
+  mounted() {},
   methods: {
     ...mapMutations(['setSelectedNotebook']),
     toBlog() {
       let usertext = 'userid=' + localStorage.getItem('userid');
-      // let url = window.location.origin + '/blog/' + getAES(usertext);
       let url = window.location.origin + '/blog';
       window.open(url);
     },
@@ -75,21 +69,6 @@ export default {
       this.$router.push({
         path: '/login',
       });
-      // getDataByGet(API_AUTH).then(res => {
-      //   res = res.data
-      //   if (res.isLogin) {
-      //     getDataByGet(API_LOGOUT).then(res => {
-      //       res = res.data
-      //       this.$Message.success(res.msg)
-      //       this.$store.commit('setUsername', '未登录')
-      //       this.$router.push({
-      //         path: '/login'
-      //       })
-      //     })
-      //   } else {
-      //     this.$Message.error('尚未登录')
-      //   }
-      // })
     },
     cancel() {
       this.$Message.info('取消注销');

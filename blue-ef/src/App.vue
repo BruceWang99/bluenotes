@@ -1,17 +1,34 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <router-view />
   </div>
-  <router-view />
 </template>
 
+<script>
+import SiderBar from '@/components/SiderBar.vue';
+import { getDataByGet } from '@/common/js/request.js';
+import { mapState } from 'vuex';
+export default {
+  name: 'App',
+  components: {
+    SiderBar,
+  },
+  computed: {
+    ...mapState(['isLogin']),
+  },
+  mounted() {},
+};
+</script>
+
 <style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+html, body, #app
+  height 100%
+
+.particles
+  z-index -100
+  position absolute
+  left 0
+  top 0
+  bottom 0
+  right 0
 </style>
