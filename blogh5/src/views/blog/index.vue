@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <header>
-      <h1>BLOG</h1>
+      <h1>前端笔记</h1>
       <!-- <ul class="menu">
                 <li>Home</li>
                 <!-- <li><a href="#">项目</a></li>
@@ -19,7 +19,7 @@
       </div>
       <div class="content-right">
         <div class="categories">
-          <h3 class="title">分类</h3>
+          <h3 class="title">前端笔记</h3>
           <ul class="category-list">
             <li @click="selectedCategory({})" :class="!selectedCategoryData.id ? 'active' : ''">
               全部文章
@@ -179,12 +179,13 @@ header {
   top: 0;
   z-index: 1;
   background: #000;
+  align-items: center;
 }
 
 header h1 {
   /* display: inline; */
   cursor: pointer;
-  margin-top: 15px;
+  font-size: 18px;
 }
 
 header ul.menu {
@@ -195,23 +196,27 @@ header ul.menu {
 .content {
   flex: 1;
   width: 100%;
-  padding: 0 20px;
+  padding-left: 20px;
   box-sizing: border-box;
   overflow: hidden;
 }
 
 .content #blog-container {
   padding-top: 7px;
+  padding-right: 78px;
+  box-sizing: border-box;
   float: left;
-  width: 85%;
+  width: 100%;
   border-bottom: 1px solid #1f1f1f;
 }
 
 .title-wrapper {
-  padding: 10px 0;
+  /* padding: 10px 0; */
+  padding: 2vh 0;
   border-top: 1px solid #1f1f1f;
   display: flex;
   align-items: center;
+  flex-flow: row wrap;
   cursor: pointer;
 }
 .title-wrapper:hover {
@@ -221,7 +226,6 @@ header ul.menu {
 .title-wrapper .title {
   font-size: 20px;
   display: inline-block;
-  width: 80%;
   padding: 0;
   margin: 0;
   word-break: keep-all;
@@ -229,20 +233,20 @@ header ul.menu {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 14px;
+  flex: 1;
 }
 .title-wrapper .time {
   display: inline-block;
-  width: 18%;
   text-align: right;
   color: #999;
+  width: 150px;
 }
-
 .content .content-right {
   float: right;
-  width: 15%;
+  width: 78px;
   position: fixed;
   top: 8.3vh;
-  right: 10px;
+  right: 0;
 }
 .content .content-right .categories .title {
   font-size: 16px;
@@ -251,16 +255,16 @@ header ul.menu {
 .content .content-right .categories .category-list {
   text-align: center;
 }
-
 .content .content-right .categories .title {
   padding: 0;
   margin: 0;
 }
-
 .content .content-right .categories .category-list li {
   cursor: pointer;
   padding: 5px 0;
-  margin: 5px 0px 5px 10px;
+  margin: 5px 10px;
+  text-align: left;
+  line-height: 18px;
 }
 .content .content-right .categories .category-list li:hover {
   background: #272727;
