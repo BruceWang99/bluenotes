@@ -32,6 +32,6 @@ npm-debug.log
 yarn-error.log
 
 #deploy
-*/dist_electron
-*/dist
+dist_electron/
+dist/
 */ftp.js
