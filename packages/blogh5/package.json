@@ -1,14 +1,14 @@
 {
   "name": "blue-note",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "vue-cli-service build",
     "upload": "node ftp.js",
     "deploy": "npm run build && npm run upload",
     "lint": "vue-cli-service lint",
     "pro": "vue-cli-service serve --mode production --open",
-    "dev": "vue-cli-service serve --open",
+    "dev:h5": "vue-cli-service serve --open",
     "electron:build": "vue-cli-service electron:build",
     "electron:serve": "vue-cli-service electron:serve"
   },
