@@ -31,15 +31,15 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --env=production --title=egg-server-blue-note-api",
-    "stop": "egg-scripts stop --title=egg-server-blue-note-api",
+    "start:api": "egg-scripts start --daemon --env=production --title=egg-server-blue-note-api",
+    "stop:api": "egg-scripts stop --title=egg-server-blue-note-api",
     "dev:api": "egg-bin dev",
-    "debug": "egg-bin debug",
-    "test": "npm run lint -- --fix && npm run test-local",
-    "test-local": "egg-bin test",
+    "test:api": "npm run lint -- --fix && npm run test-local",
+    "debug:api": "egg-bin debug",
+    "ci:api": "npm run lint && npm run cov",
     "cov": "NODE_ENV=test npx sequelize db:migrate && egg-bin cov",
+    "test-local": "egg-bin test",
     "lint": "eslint .",
-    "ci": "npm run lint && npm run cov",
     "autod": "autod"
   },
   "ci": {
