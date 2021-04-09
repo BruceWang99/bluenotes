@@ -1,5 +1,8 @@
 # bluenotes
+> 这是一个线上云笔记+blog系统, 可在线记录、保存云笔记, 并直接发布到自己的博客上
 
+云笔记系统预览地址: http://www.brucewang.vip/login
+云博客预览地址: http://www.brucewang.vip/blog
 ## 整体项目
 
 ```bash
