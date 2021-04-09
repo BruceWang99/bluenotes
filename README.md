@@ -20,8 +20,8 @@ $ open http://localhost:8282/
 ### 服务器运行
 
 ```bash
-$ lerna start:api
-$ lerna stop:api
+$ lerna run start:api
+$ lerna run stop:api
 ```
 
 ### tips
