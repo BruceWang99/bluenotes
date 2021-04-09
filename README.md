@@ -4,6 +4,7 @@
 
 ```bash
 npm i // 安装monorepo依赖
+npm install lerna -g
 lerna bootstrap // 安装子项目的依赖
 ```
 
