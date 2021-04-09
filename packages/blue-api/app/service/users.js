@@ -11,7 +11,10 @@ function toInt(str) {
 class UserService extends Service {
   async login(params) {
     const { ctx, app } = this;
-    const user = await ctx.model.User.findOne({ user_name: params.user_name });
+
+    const user = await ctx.model.User.findOne({ where: { user_name: params.user_name } });
+    console.log(user, '========>');
+
     if (!user) {
       return {
         error: true,
@@ -19,12 +22,17 @@ class UserService extends Service {
         code: 422,
       };
     }
+    console.log(user.password, params.password, '========>');
     if (user.password === params.password) {
       // 生成 token 的方式
-      const token = app.jwt.sign({ // 需要存储的 token 数据
-        username: user.user_name,
-        userid: user.id,
-      }, app.config.jwt.secret);
+      const token = app.jwt.sign(
+        {
+          // 需要存储的 token 数据
+          username: user.user_name,
+          userid: user.id,
+        },
+        app.config.jwt.secret,
+      );
       const obj = {
         token,
         user_name: user.user_name,
